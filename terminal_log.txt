@@ -1,0 +1,27 @@
+// Saat membuka daftar tugas
+
+daftar_admin [{'id': 135, '_id_keluarga': 668591, 'nama': 'nopal', 'email': '24051204001@mhs.unesa.ac.id', '_password': '12345678', 'tanggal_lahir': datetime.date(2025, 4, 17), 'jenis_kelamin': True, 'is_admin': True, 'poin': 0, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 9, 18, 784222, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 9, 18, 784222, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 135}, {'id': 137, '_id_keluarga': 668591, 'nama': 'Bima Yudha', 'email': '24051204020@mhs.unesa.ac.id', '_password': '123456', 'tanggal_lahir': datetime.date(2025, 6, 1), 'jenis_kelamin': True, 'is_admin': True, 'poin': 80, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 13, 10, 483470, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 13, 10, 483470, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 137}]
+
+daftar_member [{'id': 138, '_id_keluarga': 668591, 'nama': 'Yudhaaa', 'email': 'bimydh@gmail.com', '_password': '123456', 'tanggal_lahir': datetime.date(2025, 2, 5), 'jenis_kelamin': False, 'is_admin': False, 'poin': 0, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 30, 22, 587374, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 30, 22, 587374, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 138}]
+
+daftar_pengguna [<Admin: 668591 | nopal | 24051204001@mhs.unesa.ac.id>, <Admin: 668591 | Bima Yudha | 24051204020@mhs.unesa.ac.id>, <Member: 668591 | Yudhaaa | bimydh@gmail.com>]
+
+Merupakan admin
+
+daftar_penugasan <QuerySet [<Penugasan: Penugasan object (142)>, <Penugasan: Penugasan object (143)>, <Penugasan: Penugasan object (144)>]>       
+
+daftar_tugas [{'id': 56, '_id_keluarga': 668591, 'judul': 'Ini judul', 'deskripsi': 'rgwe4gwrer', 'status': 'belum_selesai', 'poin': 2, 'tenggat_waktu': datetime.datetime(2025, 6, 10, 12, 30, tzinfo=datetime.timezone.utc), 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 30, 53, 45302, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 30, 53, 46298, tzinfo=datetime.timezone.utc)}, {'id': 57, '_id_keluarga': 668591, 'judul': 'Mengepel', 'deskripsi': 'seorihgesi0535t', 'status': 'belum_selesai', 'poin': 4, 'tenggat_waktu': datetime.datetime(2025, 6, 7, 12, 31, tzinfo=datetime.timezone.utc), 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 31, 17, 396110, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 31, 17, 397114, tzinfo=datetime.timezone.utc)}, {'id': 58, '_id_keluarga': 668591, 'judul': 'Belanja bulanan', 'deskripsi': 'rgwe4gwrer', 'status': 'belum_selesai', 'poin': 1, 'tenggat_waktu': datetime.datetime(2025, 6, 6, 12, 31, tzinfo=datetime.timezone.utc), 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 31, 34, 707862, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 31, 34, 707862, tzinfo=datetime.timezone.utc)}]
+
+// Setelah mengubah peran user lalu membuka daftar tugas
+
+daftar_admin [{'id': 135, '_id_keluarga': 668591, 'nama': 'nopal', 'email': '24051204001@mhs.unesa.ac.id', '_password': '12345678', 'tanggal_lahir': datetime.date(2025, 4, 17), 'jenis_kelamin': True, 'is_admin': True, 'poin': 0, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 9, 18, 784222, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 9, 18, 784222, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 135}, {'id': 137, '_id_keluarga': 668591, 'nama': 'Bima Yudha', 'email': '24051204020@mhs.unesa.ac.id', '_password': '123456', 'tanggal_lahir': datetime.date(2025, 6, 1), 'jenis_kelamin': True, 'is_admin': True, 'poin': 80, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 13, 10, 483470, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 13, 10, 483470, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 137}, {'id': 139, '_id_keluarga': 668591, 'nama': 'Yudhaaa', 'email': 'bimydh@gmail.com', '_password': '123456', 'tanggal_lahir': datetime.date(2025, 2, 5), 'jenis_kelamin': False, 'is_admin': True, 'poin': 0, 'tanggal_dibuat': datetime.datetime(2025, 6, 2, 12, 39, 50, 627189, tzinfo=datetime.timezone.utc), 'tanggal_diubah': datetime.datetime(2025, 6, 2, 12, 39, 50, 627189, tzinfo=datetime.timezone.utc), 'abstrakpengguna_ptr_id': 139}]
+
+daftar_member []
+
+daftar_pengguna [<Admin: 668591 | nopal | 24051204001@mhs.unesa.ac.id>, <Admin: 668591 | Bima Yudha | 24051204020@mhs.unesa.ac.id>, <Admin: 668591 | Yudhaaa | bimydh@gmail.com>]
+
+Merupakan admin
+
+daftar_penugasan <QuerySet []>
+
+daftar_tugas []
