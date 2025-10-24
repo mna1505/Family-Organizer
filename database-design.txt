@@ -1,0 +1,93 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table interface_users {
+  id integer [primary key]
+  id_keluarga integer
+  nama varchar
+  email varchar [unique]
+  password varchar
+  tanggal_lahir date
+  jenis_kelamin boolean
+  is_admin boolean
+  poin integer
+  created_at timestamp
+}
+
+Table admins {
+  id integer [primary key]
+}
+
+Table members {
+  id integer [primary key]
+}
+
+Table login_tokens {
+  id integer [primary key]
+  user_id integer
+  token varchar
+  expires_at timestamp
+  used boolean [default: false]
+  created_at timestamp
+}
+
+Table tasks {
+  id integer [primary key]
+  id_keluarga integer
+  judul varchar
+  deskripsi text
+  status varchar
+  tenggat_waktu timestamp
+  tanggal_dibuat timestamp
+  tanggal_diubah timestamp
+}
+
+Table task_assignments {
+  id integer [primary key]
+  user_id integer
+  task_id integer
+  peran varchar [note: 'admin atau member']
+}
+
+Table stocks {
+  id integer [primary key]
+  id_keluarga integer
+  nama varchar
+  jumlah float
+  satuan varchar
+  interval_habis integer
+}
+
+Table transaksi_keuangan {
+  id integer [primary key]
+  id_keluarga integer
+  nama varchar
+  nominal float
+  tanggal_transaksi timestamp
+  tanggal_diubah timestamp
+  jenis varchar [note: 'pemasukan atau pengeluaran']
+}
+
+Table pengguna_transaksi {
+  id integer [primary key]
+  transaksi_id integer
+  user_id integer
+}
+
+// Relasi User dengan Admin dan Member (One-to-One via inheritance)
+Ref: admins.id > interface_users.id
+Ref: members.id > interface_users.id
+
+// Login token untuk login via email
+Ref: login_tokens.user_id > interface_users.id
+
+// TaskAssignment relasi ke User dan Task (Many-to-One)
+Ref: task_assignments.user_id > interface_users.id
+Ref: task_assignments.task_id > tasks.id
+
+// TransaksiKeuangan direlasikan ke interface_users via pengguna_transaksi
+Ref: pengguna_transaksi.transaksi_id > transaksi_keuangan.id
+Ref: pengguna_transaksi.user_id > interface_users.id
+
+// Relasi Stocks ke Interface Users berdasarkan id_keluarga
+Ref: stocks.id_keluarga > interface_users.id_keluarga

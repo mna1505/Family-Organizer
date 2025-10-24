@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/beranda.css' %}">
+    <title>Beranda</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Baloo Chettan 2', cursive;
+      }
+      .foto-pembuat {
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 30px 30px 0 0;
+        width: 100%;
+        height: 380px;
+      }
+      .foto-pembuat-1 {
+        background-image: url("{% static 'images/kanzul.jpg' %}");
+      }
+      .foto-pembuat-2 {
+        background-image: url("{% static 'images/bima.png' %}");
+      }
+      .foto-pembuat-3 {
+        background-image: url("{% static 'images/naufal.jpg' %}");
+      }
+    </style>
+</head>
+<body>
+  <div style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);display: flex; flex-direction: column;">
+    <div style="width: 100%; height: 12%; display: flex;">
+      <div style="width: 75%; height: 100px;padding: 25px;"><h1 style="color: rgb(114, 192, 104);">Family Organizer</h1></div>
+      <div style="width: 25%; height: 100px;padding: 25px;display: flex;">
+        <button onclick="pindahlogin_lama()" style="color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0); border: none; font-size: 20px; font-weight: bold;">Log In</button>
+        <button onclick="pindahsignup()" style="color: rgb(255, 255, 255); background-color: rgb(114, 192, 104); border: none; font-size: 20px; font-weight: bold; border-radius: 15px;">Sign Up</button>
+      </div>
+    </div>
+    <div style="width: 100%; height: 88%;display: flex; padding: 100px;">
+      <div style="width: 50%; height: 100%;display: flex; flex-direction: column;">
+        <div style="width: 100%; height: 150px; padding-top: 75px;"><h1 style="font-size: 44px;">Solusi Rumah Tangga Sat Set</h1></div>
+        <div style="width: 100%; height: 10px; background-color: rgb(199, 199, 199); border-radius: 15px;"></div>
+        <div style="width: 100%; height: 150px; padding-top: 25px;"><h2>Kelola Tugas, Keuangan, dan Barang Rumah Tangga dengan Cepat dalam Suatu Aplikasi</h2></div>
+
+      </div>
+      <div style="width: 50%; height: 100%;">
+        <img src="{% static 'images/laptop.png' %}" alt="mantap" style="width: 650px; height: 450px;">
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%; height: 100%; background-color: rgb(114, 192, 104);">
+    <div style="width: 100%; height: 100%; padding: 150px; display: flex;">
+      <div style="width: 40%; height: 100%;padding-top: 50px;"><img src="{% static 'images/home.png' %}" alt="mantao" style="width: 450px; height: 375px;"></div>
+      <div style="width: 60%; height: 100%; padding: 40px;"><h1 style="color: white;">Family Organizer dibuat untuk membantu keluarga mengatur aktivitas harian dengan lebih terstruktur. Proyek ini juga merupakan bagian dari tugas akhir mata kuliah Pemrograman Berorientasi Obyek, yang kami kembangkan untuk menerapkan konsep OOP sekaligus menciptakan solusi digital yang bermanfaat bagi kehidupan keluarga masa kini.</h1></div>
+    </div>
+  </div>
+  <div style="width: 100%; height: 100%; background-color: rgb(255, 255, 255);">
+    <div style="width: 100%; height: 100%; padding: 100px; display: flex; flex-direction: column;">
+      <div style="width: 100%; height: 100px; text-align: center;"><h1 style="font-size: 44px;">Fasilitas yang Kami Beri</h1></div>
+      <div style="width: 100%; height: 245px; display: flex; justify-content: space-evenly; margin-bottom: 10px;">
+        <div style="width: 49%; height: 100%;border: solid; border-width: 1px; border-radius: 15px;box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.318);text-align: center;padding: 50px;"><h1 style="color: rgb(114, 192, 104); font-size: 48px;">Pengelolaan Tugas Rumah Tangga</h1></div>
+        <div style="width: 49%; height: 100%;border: solid; border-width: 1px; border-radius: 15px;box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.318);text-align: center;padding: 50px;"><h1 style="color: rgb(114, 192, 104); font-size: 48px;">Pencatatan Keuangan Keluarga</h1></div>
+      </div>
+      <div style="width: 100%; height: 245px; display: flex; justify-content: space-evenly;">
+        <div style="width: 49%; height: 100%;border: solid; border-width: 1px; border-radius: 15px;box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.318);text-align: center;padding: 85px;"><h1 style="color: rgb(114, 192, 104); font-size: 48px;">Pemantauan Statistik</h1></div>
+        <div style="width: 49%; height: 100%;border: solid; border-width: 1px; border-radius: 15px;box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.318);text-align: center;padding: 55px;"><h1 style="color: rgb(114, 192, 104); font-size: 48px;">Pengelolaan Stok Barang</h1></div>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%; height: 1000px; background-color: rgb(114, 192, 104);">
+    <div style="width: 100%; height: 100%; padding: 100px;display: flex; flex-direction: column;">
+      <div style="width: 100%; height: 100px; text-align: center;"><h1 style="font-size: 44px; color: white;">Perancang Aplikasi Family Organizer</h1></div>
+      <div style="width: 100%; height: 50px;text-align: center; display: flex;justify-content: space-evenly;">
+        <h1 style="color: white;">Front-End</h1>
+        <h1 style="color: white;">Back-End</h1>
+        <h1 style="color: white;">UI/UX Designer</h1>
+      </div>
+      <div style="width: 100%; height: 100%; display: flex; justify-content: space-around;">
+        <div style="width: 350px; height: 100%; display: flex; flex-direction: column;border-radius: 30px; background-color: white; box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);">
+          <div class="foto-pembuat foto-pembuat-1"></div>
+          <div style="width: 100%; height: 85px;text-align: center;padding-left: 20px; padding-right: 20px; padding-top: 12px;"><h2>Kanzul Jawad Murod As Shofi</h2></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/linkedin.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">Kanzul Jawad Murod As Shofi</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/github.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">Kzl-ll</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/instagram.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">_kzl.ll</h3></div>
+
+        </div>
+        <div style="width: 350px; height: 100%; display: flex; flex-direction: column;border-radius: 30px; background-color: white; box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);">
+          <div class="foto-pembuat foto-pembuat-2"></div>
+          <div style="width: 100%; height: 85px;text-align: center;padding-left: 20px; padding-right: 20px; padding-top: 12px;"><h2>Mohamad Bima Yudha</h2></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/linkedin.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">Mohamad Bima Yudha</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/github.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">mby444</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/instagram.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">m_bima_yudha</h3></div>
+        </div>
+        <div style="width: 350px; height: 100%; display: flex; flex-direction: column;border-radius: 30px; background-color: white; box-shadow: 0px 15px 4px rgba(0, 0, 0, 0.4);">
+          <div class="foto-pembuat foto-pembuat-3"></div>
+          <div style="width: 100%; height: 85px;text-align: center;padding-left: 20px; padding-right: 20px; padding-top: 12px;"><h2>Muhammad Naufal Aziz</h2></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/linkedin.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">Naufal Aziz</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/github.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">mna1505</h3></div>
+          <div style="width: 100%; height: 70px;padding-left: 20px; padding-right: 20px;display: flex;"><img src="{% static 'images/instagram.png' %}" alt="" style="width: 35px; height: 35px;"><h3 style="padding: 4px; padding-left: 10px;">15_mnaz</h3></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+
+  function pindahsignup() {
+    window.location.href = "{% url 'signup' %}";
+  }
+  function pindahlogin_lama() {
+    window.location.href = "{% url 'login' %}";
+  }
+ 
+  const list1 = document.querySelector('#list1');
+  const img1 = document.querySelector('#list1 img');
+
+  const originalSrc1 = img1.src; // Save the original source
+  const hoverSrc1 = "{% static 'group_add.png' %}"; // Your new image for hover
+  list1.addEventListener('mouseenter', () => {
+    img1.src = hoverSrc1;
+
+  });
+
+  list1.addEventListener('mouseleave', () => {
+    img1.src = originalSrc1;
+  });
+
+  const list2 = document.querySelector('#list2');
+  const img2 = document.querySelector('#list2 img');
+
+  const originalSrc2 = img2.src; // Save the original source
+  const hoverSrc2 = "{% static 'Folder_check.png' %}"; // Your new image for hover
+  list2.addEventListener('mouseenter', () => {
+    img2.src = hoverSrc2;
+
+  });
+
+  list2.addEventListener('mouseleave', () => {
+    img2.src = originalSrc2;
+  });  
+
+
+  const list3 = document.querySelector('#list3');
+  const img3 = document.querySelector('#list3 img');
+
+  const originalSrc3 = img3.src; // Save the original source
+  const hoverSrc3 = "{% static 'Credit card.png' %}"; // Your new image for hover
+  list3.addEventListener('mouseenter', () => {
+    img3.src = hoverSrc3;
+
+  });
+
+  list3.addEventListener('mouseleave', () => {
+    img3.src = originalSrc3;
+  });  
+
+
+  const list4 = document.querySelector('#list4');
+  const img4 = document.querySelector('#list4 img');
+
+  const originalSrc4 = img4.src; // Save the original source
+  const hoverSrc4 = "{% static 'Chart_alt.png' %}"; // Your new image for hover
+  list4.addEventListener('mouseenter', () => {
+    img4.src = hoverSrc4;
+
+  });
+
+  list4.addEventListener('mouseleave', () => {
+    img4.src = originalSrc4;
+  });  
+
+
+  const list5 = document.querySelector('#list5');
+  const img5 = document.querySelector('#list5 img');
+
+  const originalSrc5 = img5.src; // Save the original source
+  const hoverSrc5 = "{% static 'package.png' %}"; // Your new image for hover
+  list5.addEventListener('mouseenter', () => {
+    img5.src = hoverSrc5;
+
+  });
+
+  list5.addEventListener('mouseleave', () => {
+    img5.src = originalSrc5;
+  });  
+
+
+
+
+</script>
+</html>

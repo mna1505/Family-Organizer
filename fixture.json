@@ -1,0 +1,1102 @@
+[
+    {
+        "model": "fo_app.admin",
+        "pk": 1,
+        "fields": {
+            "id_keluarga": 1,
+            "nama": "Admin Keluarga 1",
+            "email": "admin1@example.com",
+            "password": "adminpass",
+            "tanggal_lahir": "1980-01-01",
+            "jenis_kelamin": true,
+            "is_admin": true,
+            "poin": 269,
+            "tanggal_dibuat": "2025-05-23T22:37:29.475429",
+            "tanggal_diubah": "2025-04-29T22:37:29.475449"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 2,
+        "fields": {
+            "id_keluarga": 1,
+            "nama": "Member1 Keluarga 1",
+            "email": "member1_kel1@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1990-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 28,
+            "tanggal_dibuat": "2025-05-12T22:37:29.475471",
+            "tanggal_diubah": "2025-05-18T22:37:29.475477"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 3,
+        "fields": {
+            "id_keluarga": 1,
+            "nama": "Member2 Keluarga 1",
+            "email": "member2_kel1@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1991-06-15",
+            "jenis_kelamin": true,
+            "is_admin": false,
+            "poin": 67,
+            "tanggal_dibuat": "2025-05-20T22:37:29.475492",
+            "tanggal_diubah": "2025-05-13T22:37:29.475503"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 1,
+        "fields": {
+            "id_keluarga": 1,
+            "email": "admin1@example.com",
+            "is_admin": true,
+            "token": "token-admin-1",
+            "tanggal_dibuat": "2025-05-02T22:37:29.475510",
+            "tanggal_diubah": "2025-05-06T22:37:29.475516"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 2,
+        "fields": {
+            "id_keluarga": 1,
+            "email": "member1_kel1@example.com",
+            "is_admin": false,
+            "token": "token-member-2",
+            "tanggal_dibuat": "2025-05-18T22:37:29.475526",
+            "tanggal_diubah": "2025-05-04T22:37:29.475532"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 3,
+        "fields": {
+            "id_keluarga": 1,
+            "email": "member2_kel1@example.com",
+            "is_admin": false,
+            "token": "token-member-3",
+            "tanggal_dibuat": "2025-05-18T22:37:29.475539",
+            "tanggal_diubah": "2025-05-08T22:37:29.475544"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 1,
+        "fields": {
+            "id_keluarga": 1,
+            "judul": "Tugas 1 Keluarga 1",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 39,
+            "tenggat_waktu": "2025-06-02T22:37:29.475554",
+            "tanggal_dibuat": "2025-05-12T22:37:29.475559",
+            "tanggal_diubah": "2025-05-04T22:37:29.475562"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 1,
+        "fields": {
+            "pengguna": 1,
+            "tugas": 1,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 2,
+        "fields": {
+            "pengguna": 2,
+            "tugas": 1,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 3,
+        "fields": {
+            "pengguna": 3,
+            "tugas": 1,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 2,
+        "fields": {
+            "id_keluarga": 1,
+            "judul": "Tugas 2 Keluarga 1",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 21,
+            "tenggat_waktu": "2025-06-02T22:37:29.475575",
+            "tanggal_dibuat": "2025-05-26T22:37:29.475578",
+            "tanggal_diubah": "2025-05-20T22:37:29.475581"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 4,
+        "fields": {
+            "pengguna": 1,
+            "tugas": 2,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 5,
+        "fields": {
+            "pengguna": 2,
+            "tugas": 2,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 6,
+        "fields": {
+            "pengguna": 3,
+            "tugas": 2,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 1,
+        "fields": {
+            "id_keluarga": 1,
+            "nama": "Beras",
+            "jumlah": 7,
+            "satuan": "kg",
+            "interval_habis": 30,
+            "tanggal_dibuat": "2025-05-07T22:37:29.475590",
+            "tanggal_diubah": "2025-05-28T22:37:29.475593"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 2,
+        "fields": {
+            "id_keluarga": 1,
+            "nama": "Minyak",
+            "jumlah": 4,
+            "satuan": "liter",
+            "interval_habis": 9,
+            "tanggal_dibuat": "2025-05-03T22:37:29.475598",
+            "tanggal_diubah": "2025-05-10T22:37:29.475602"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 1,
+        "fields": {
+            "id_keluarga": 1,
+            "pengguna": 1,
+            "nama": "Transaksi 1 Keluarga 1",
+            "nominal": 29268,
+            "tanggal_transaksi": "2025-05-09T22:37:29.475610",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-05-17T22:37:29.475614",
+            "tanggal_diubah": "2025-04-30T22:37:29.475617"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 2,
+        "fields": {
+            "id_keluarga": 1,
+            "pengguna": 3,
+            "nama": "Transaksi 2 Keluarga 1",
+            "nominal": 30904,
+            "tanggal_transaksi": "2025-05-19T22:37:29.475623",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-04-30T22:37:29.475627",
+            "tanggal_diubah": "2025-05-03T22:37:29.475629"
+        }
+    },
+    {
+        "model": "fo_app.admin",
+        "pk": 4,
+        "fields": {
+            "id_keluarga": 2,
+            "nama": "Admin Keluarga 2",
+            "email": "admin2@example.com",
+            "password": "adminpass",
+            "tanggal_lahir": "1980-01-01",
+            "jenis_kelamin": true,
+            "is_admin": true,
+            "poin": 307,
+            "tanggal_dibuat": "2025-05-04T22:37:29.475635",
+            "tanggal_diubah": "2025-05-19T22:37:29.475638"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 5,
+        "fields": {
+            "id_keluarga": 2,
+            "nama": "Member1 Keluarga 2",
+            "email": "member1_kel2@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1990-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 109,
+            "tanggal_dibuat": "2025-05-28T22:37:29.475646",
+            "tanggal_diubah": "2025-05-03T22:37:29.475651"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 6,
+        "fields": {
+            "id_keluarga": 2,
+            "nama": "Member2 Keluarga 2",
+            "email": "member2_kel2@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1991-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 268,
+            "tanggal_dibuat": "2025-05-22T22:37:29.475662",
+            "tanggal_diubah": "2025-05-19T22:37:29.475667"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 4,
+        "fields": {
+            "id_keluarga": 2,
+            "email": "admin2@example.com",
+            "is_admin": true,
+            "token": "token-admin-2",
+            "tanggal_dibuat": "2025-05-25T22:37:29.475674",
+            "tanggal_diubah": "2025-05-24T22:37:29.475680"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 5,
+        "fields": {
+            "id_keluarga": 2,
+            "email": "member2_kel2@example.com",
+            "is_admin": false,
+            "token": "token-member-5",
+            "tanggal_dibuat": "2025-04-28T22:37:29.475687",
+            "tanggal_diubah": "2025-05-13T22:37:29.475693"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 6,
+        "fields": {
+            "id_keluarga": 2,
+            "email": "member1_kel2@example.com",
+            "is_admin": false,
+            "token": "token-member-6",
+            "tanggal_dibuat": "2025-04-30T22:37:29.475700",
+            "tanggal_diubah": "2025-05-16T22:37:29.475706"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 3,
+        "fields": {
+            "id_keluarga": 2,
+            "judul": "Tugas 1 Keluarga 2",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 22,
+            "tenggat_waktu": "2025-06-02T22:37:29.475715",
+            "tanggal_dibuat": "2025-05-20T22:37:29.475720",
+            "tanggal_diubah": "2025-05-15T22:37:29.475724"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 7,
+        "fields": {
+            "pengguna": 4,
+            "tugas": 3,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 8,
+        "fields": {
+            "pengguna": 5,
+            "tugas": 3,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 9,
+        "fields": {
+            "pengguna": 6,
+            "tugas": 3,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 4,
+        "fields": {
+            "id_keluarga": 2,
+            "judul": "Tugas 2 Keluarga 2",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 39,
+            "tenggat_waktu": "2025-06-02T22:37:29.475738",
+            "tanggal_dibuat": "2025-05-18T22:37:29.475742",
+            "tanggal_diubah": "2025-05-27T22:37:29.475747"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 10,
+        "fields": {
+            "pengguna": 4,
+            "tugas": 4,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 11,
+        "fields": {
+            "pengguna": 5,
+            "tugas": 4,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 12,
+        "fields": {
+            "pengguna": 6,
+            "tugas": 4,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 3,
+        "fields": {
+            "id_keluarga": 2,
+            "nama": "Beras",
+            "jumlah": 5,
+            "satuan": "kg",
+            "interval_habis": 25,
+            "tanggal_dibuat": "2025-05-11T22:37:29.475760",
+            "tanggal_diubah": "2025-05-24T22:37:29.475766"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 4,
+        "fields": {
+            "id_keluarga": 2,
+            "nama": "Minyak",
+            "jumlah": 8,
+            "satuan": "liter",
+            "interval_habis": 17,
+            "tanggal_dibuat": "2025-05-09T22:37:29.475774",
+            "tanggal_diubah": "2025-05-28T22:37:29.475781"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 3,
+        "fields": {
+            "id_keluarga": 2,
+            "pengguna": 5,
+            "nama": "Transaksi 1 Keluarga 2",
+            "nominal": 26228,
+            "tanggal_transaksi": "2025-05-03T22:37:29.475790",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-05-14T22:37:29.475793",
+            "tanggal_diubah": "2025-05-26T22:37:29.475796"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 4,
+        "fields": {
+            "id_keluarga": 2,
+            "pengguna": 4,
+            "nama": "Transaksi 2 Keluarga 2",
+            "nominal": 39389,
+            "tanggal_transaksi": "2025-05-18T22:37:29.475802",
+            "jenis": "pemasukan",
+            "tanggal_dibuat": "2025-04-28T22:37:29.475806",
+            "tanggal_diubah": "2025-05-23T22:37:29.475809"
+        }
+    },
+    {
+        "model": "fo_app.admin",
+        "pk": 7,
+        "fields": {
+            "id_keluarga": 3,
+            "nama": "Admin Keluarga 3",
+            "email": "admin3@example.com",
+            "password": "adminpass",
+            "tanggal_lahir": "1980-01-01",
+            "jenis_kelamin": true,
+            "is_admin": true,
+            "poin": 211,
+            "tanggal_dibuat": "2025-05-05T22:37:29.475813",
+            "tanggal_diubah": "2025-05-09T22:37:29.475817"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 8,
+        "fields": {
+            "id_keluarga": 3,
+            "nama": "Member1 Keluarga 3",
+            "email": "member1_kel3@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1990-06-15",
+            "jenis_kelamin": true,
+            "is_admin": false,
+            "poin": 186,
+            "tanggal_dibuat": "2025-05-26T22:37:29.475823",
+            "tanggal_diubah": "2025-05-13T22:37:29.475826"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 9,
+        "fields": {
+            "id_keluarga": 3,
+            "nama": "Member2 Keluarga 3",
+            "email": "member2_kel3@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1991-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 39,
+            "tanggal_dibuat": "2025-05-22T22:37:29.475832",
+            "tanggal_diubah": "2025-05-19T22:37:29.475835"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 7,
+        "fields": {
+            "id_keluarga": 3,
+            "email": "admin3@example.com",
+            "is_admin": true,
+            "token": "token-admin-3",
+            "tanggal_dibuat": "2025-05-11T22:37:29.475839",
+            "tanggal_diubah": "2025-05-04T22:37:29.475842"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 8,
+        "fields": {
+            "id_keluarga": 3,
+            "email": "member1_kel3@example.com",
+            "is_admin": false,
+            "token": "token-member-8",
+            "tanggal_dibuat": "2025-05-27T22:37:29.475846",
+            "tanggal_diubah": "2025-04-29T22:37:29.475849"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 9,
+        "fields": {
+            "id_keluarga": 3,
+            "email": "member2_kel3@example.com",
+            "is_admin": false,
+            "token": "token-member-9",
+            "tanggal_dibuat": "2025-05-05T22:37:29.475854",
+            "tanggal_diubah": "2025-05-04T22:37:29.475857"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 5,
+        "fields": {
+            "id_keluarga": 3,
+            "judul": "Tugas 1 Keluarga 3",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 18,
+            "tenggat_waktu": "2025-06-02T22:37:29.475861",
+            "tanggal_dibuat": "2025-05-17T22:37:29.475864",
+            "tanggal_diubah": "2025-05-13T22:37:29.475867"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 13,
+        "fields": {
+            "pengguna": 7,
+            "tugas": 5,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 14,
+        "fields": {
+            "pengguna": 8,
+            "tugas": 5,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 15,
+        "fields": {
+            "pengguna": 9,
+            "tugas": 5,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 6,
+        "fields": {
+            "id_keluarga": 3,
+            "judul": "Tugas 2 Keluarga 3",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 98,
+            "tenggat_waktu": "2025-06-02T22:37:29.475874",
+            "tanggal_dibuat": "2025-05-08T22:37:29.475876",
+            "tanggal_diubah": "2025-05-01T22:37:29.475879"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 16,
+        "fields": {
+            "pengguna": 7,
+            "tugas": 6,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 17,
+        "fields": {
+            "pengguna": 8,
+            "tugas": 6,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 18,
+        "fields": {
+            "pengguna": 9,
+            "tugas": 6,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 5,
+        "fields": {
+            "id_keluarga": 3,
+            "nama": "Beras",
+            "jumlah": 3,
+            "satuan": "kg",
+            "interval_habis": 15,
+            "tanggal_dibuat": "2025-04-30T22:37:29.475886",
+            "tanggal_diubah": "2025-05-27T22:37:29.475889"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 6,
+        "fields": {
+            "id_keluarga": 3,
+            "nama": "Minyak",
+            "jumlah": 3,
+            "satuan": "liter",
+            "interval_habis": 9,
+            "tanggal_dibuat": "2025-05-10T22:37:29.475906",
+            "tanggal_diubah": "2025-05-12T22:37:29.475912"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 5,
+        "fields": {
+            "id_keluarga": 3,
+            "pengguna": 7,
+            "nama": "Transaksi 1 Keluarga 3",
+            "nominal": 47415,
+            "tanggal_transaksi": "2025-05-10T22:37:29.475920",
+            "jenis": "pemasukan",
+            "tanggal_dibuat": "2025-05-03T22:37:29.475923",
+            "tanggal_diubah": "2025-05-27T22:37:29.475926"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 6,
+        "fields": {
+            "id_keluarga": 3,
+            "pengguna": 8,
+            "nama": "Transaksi 2 Keluarga 3",
+            "nominal": 183186,
+            "tanggal_transaksi": "2025-05-22T22:37:29.475931",
+            "jenis": "pemasukan",
+            "tanggal_dibuat": "2025-05-02T22:37:29.475935",
+            "tanggal_diubah": "2025-05-13T22:37:29.475940"
+        }
+    },
+    {
+        "model": "fo_app.admin",
+        "pk": 10,
+        "fields": {
+            "id_keluarga": 4,
+            "nama": "Admin Keluarga 4",
+            "email": "admin4@example.com",
+            "password": "adminpass",
+            "tanggal_lahir": "1980-01-01",
+            "jenis_kelamin": true,
+            "is_admin": true,
+            "poin": 63,
+            "tanggal_dibuat": "2025-05-10T22:37:29.475948",
+            "tanggal_diubah": "2025-05-05T22:37:29.475953"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 11,
+        "fields": {
+            "id_keluarga": 4,
+            "nama": "Member1 Keluarga 4",
+            "email": "member1_kel4@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1990-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 15,
+            "tanggal_dibuat": "2025-05-12T22:37:29.475963",
+            "tanggal_diubah": "2025-05-06T22:37:29.475966"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 12,
+        "fields": {
+            "id_keluarga": 4,
+            "nama": "Member2 Keluarga 4",
+            "email": "member2_kel4@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1991-06-15",
+            "jenis_kelamin": true,
+            "is_admin": false,
+            "poin": 75,
+            "tanggal_dibuat": "2025-05-04T22:37:29.475972",
+            "tanggal_diubah": "2025-05-19T22:37:29.475975"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 10,
+        "fields": {
+            "id_keluarga": 4,
+            "email": "admin4@example.com",
+            "is_admin": true,
+            "token": "token-admin-4",
+            "tanggal_dibuat": "2025-05-11T22:37:29.475979",
+            "tanggal_diubah": "2025-05-27T22:37:29.475982"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 11,
+        "fields": {
+            "id_keluarga": 4,
+            "email": "member2_kel4@example.com",
+            "is_admin": false,
+            "token": "token-member-11",
+            "tanggal_dibuat": "2025-05-14T22:37:29.475986",
+            "tanggal_diubah": "2025-05-03T22:37:29.475989"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 12,
+        "fields": {
+            "id_keluarga": 4,
+            "email": "member1_kel4@example.com",
+            "is_admin": false,
+            "token": "token-member-12",
+            "tanggal_dibuat": "2025-05-15T22:37:29.475995",
+            "tanggal_diubah": "2025-05-08T22:37:29.475998"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 7,
+        "fields": {
+            "id_keluarga": 4,
+            "judul": "Tugas 1 Keluarga 4",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 33,
+            "tenggat_waktu": "2025-06-02T22:37:29.476003",
+            "tanggal_dibuat": "2025-05-28T22:37:29.476007",
+            "tanggal_diubah": "2025-05-16T22:37:29.476013"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 19,
+        "fields": {
+            "pengguna": 10,
+            "tugas": 7,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 20,
+        "fields": {
+            "pengguna": 11,
+            "tugas": 7,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 21,
+        "fields": {
+            "pengguna": 12,
+            "tugas": 7,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 8,
+        "fields": {
+            "id_keluarga": 4,
+            "judul": "Tugas 2 Keluarga 4",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 52,
+            "tenggat_waktu": "2025-06-02T22:37:29.476024",
+            "tanggal_dibuat": "2025-05-18T22:37:29.476028",
+            "tanggal_diubah": "2025-05-13T22:37:29.476033"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 22,
+        "fields": {
+            "pengguna": 10,
+            "tugas": 8,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 23,
+        "fields": {
+            "pengguna": 11,
+            "tugas": 8,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 24,
+        "fields": {
+            "pengguna": 12,
+            "tugas": 8,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 7,
+        "fields": {
+            "id_keluarga": 4,
+            "nama": "Beras",
+            "jumlah": 7,
+            "satuan": "kg",
+            "interval_habis": 23,
+            "tanggal_dibuat": "2025-05-19T22:37:29.476043",
+            "tanggal_diubah": "2025-05-15T22:37:29.476046"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 8,
+        "fields": {
+            "id_keluarga": 4,
+            "nama": "Minyak",
+            "jumlah": 5,
+            "satuan": "liter",
+            "interval_habis": 7,
+            "tanggal_dibuat": "2025-04-29T22:37:29.476051",
+            "tanggal_diubah": "2025-05-13T22:37:29.476054"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 7,
+        "fields": {
+            "id_keluarga": 4,
+            "pengguna": 11,
+            "nama": "Transaksi 1 Keluarga 4",
+            "nominal": 190665,
+            "tanggal_transaksi": "2025-05-24T22:37:29.476059",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-05-18T22:37:29.476063",
+            "tanggal_diubah": "2025-05-22T22:37:29.476066"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 8,
+        "fields": {
+            "id_keluarga": 4,
+            "pengguna": 12,
+            "nama": "Transaksi 2 Keluarga 4",
+            "nominal": 143780,
+            "tanggal_transaksi": "2025-05-06T22:37:29.476070",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-04-28T22:37:29.476074",
+            "tanggal_diubah": "2025-05-12T22:37:29.476077"
+        }
+    },
+    {
+        "model": "fo_app.admin",
+        "pk": 13,
+        "fields": {
+            "id_keluarga": 5,
+            "nama": "Admin Keluarga 5",
+            "email": "admin5@example.com",
+            "password": "adminpass",
+            "tanggal_lahir": "1980-01-01",
+            "jenis_kelamin": true,
+            "is_admin": true,
+            "poin": 54,
+            "tanggal_dibuat": "2025-05-02T22:37:29.476081",
+            "tanggal_diubah": "2025-05-10T22:37:29.476084"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 14,
+        "fields": {
+            "id_keluarga": 5,
+            "nama": "Member1 Keluarga 5",
+            "email": "member1_kel5@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1990-06-15",
+            "jenis_kelamin": true,
+            "is_admin": false,
+            "poin": 136,
+            "tanggal_dibuat": "2025-05-02T22:37:29.476091",
+            "tanggal_diubah": "2025-05-25T22:37:29.476094"
+        }
+    },
+    {
+        "model": "fo_app.member",
+        "pk": 15,
+        "fields": {
+            "id_keluarga": 5,
+            "nama": "Member2 Keluarga 5",
+            "email": "member2_kel5@example.com",
+            "password": "memberpass",
+            "tanggal_lahir": "1991-06-15",
+            "jenis_kelamin": false,
+            "is_admin": false,
+            "poin": 39,
+            "tanggal_dibuat": "2025-05-10T22:37:29.476100",
+            "tanggal_diubah": "2025-05-04T22:37:29.476105"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 13,
+        "fields": {
+            "id_keluarga": 5,
+            "email": "admin5@example.com",
+            "is_admin": true,
+            "token": "token-admin-5",
+            "tanggal_dibuat": "2025-05-23T22:37:29.476111",
+            "tanggal_diubah": "2025-05-07T22:37:29.476116"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 14,
+        "fields": {
+            "id_keluarga": 5,
+            "email": "member1_kel5@example.com",
+            "is_admin": false,
+            "token": "token-member-14",
+            "tanggal_dibuat": "2025-05-25T22:37:29.476123",
+            "tanggal_diubah": "2025-05-06T22:37:29.476128"
+        }
+    },
+    {
+        "model": "fo_app.tokenlogin",
+        "pk": 15,
+        "fields": {
+            "id_keluarga": 5,
+            "email": "member2_kel5@example.com",
+            "is_admin": false,
+            "token": "token-member-15",
+            "tanggal_dibuat": "2025-05-12T22:37:29.476135",
+            "tanggal_diubah": "2025-05-06T22:37:29.476140"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 9,
+        "fields": {
+            "id_keluarga": 5,
+            "judul": "Tugas 1 Keluarga 5",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 85,
+            "tenggat_waktu": "2025-06-02T22:37:29.476144",
+            "tanggal_dibuat": "2025-05-21T22:37:29.476147",
+            "tanggal_diubah": "2025-05-21T22:37:29.476150"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 25,
+        "fields": {
+            "pengguna": 13,
+            "tugas": 9,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 26,
+        "fields": {
+            "pengguna": 14,
+            "tugas": 9,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 27,
+        "fields": {
+            "pengguna": 15,
+            "tugas": 9,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.tugas",
+        "pk": 10,
+        "fields": {
+            "id_keluarga": 5,
+            "judul": "Tugas 2 Keluarga 5",
+            "deskripsi": "Deskripsi tugas",
+            "status": "belum_selesai",
+            "poin": 55,
+            "tenggat_waktu": "2025-06-02T22:37:29.476160",
+            "tanggal_dibuat": "2025-05-01T22:37:29.476164",
+            "tanggal_diubah": "2025-05-27T22:37:29.476168"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 28,
+        "fields": {
+            "pengguna": 13,
+            "tugas": 10,
+            "peran": "admin"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 29,
+        "fields": {
+            "pengguna": 14,
+            "tugas": 10,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.penugasan",
+        "pk": 30,
+        "fields": {
+            "pengguna": 15,
+            "tugas": 10,
+            "peran": "member"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 9,
+        "fields": {
+            "id_keluarga": 5,
+            "nama": "Beras",
+            "jumlah": 4,
+            "satuan": "kg",
+            "interval_habis": 25,
+            "tanggal_dibuat": "2025-05-15T22:37:29.476178",
+            "tanggal_diubah": "2025-05-24T22:37:29.476181"
+        }
+    },
+    {
+        "model": "fo_app.stok",
+        "pk": 10,
+        "fields": {
+            "id_keluarga": 5,
+            "nama": "Minyak",
+            "jumlah": 10,
+            "satuan": "liter",
+            "interval_habis": 27,
+            "tanggal_dibuat": "2025-05-08T22:37:29.476186",
+            "tanggal_diubah": "2025-05-08T22:37:29.476189"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 9,
+        "fields": {
+            "id_keluarga": 5,
+            "pengguna": 15,
+            "nama": "Transaksi 1 Keluarga 5",
+            "nominal": 159681,
+            "tanggal_transaksi": "2025-04-28T22:37:29.476194",
+            "jenis": "pemasukan",
+            "tanggal_dibuat": "2025-05-03T22:37:29.476198",
+            "tanggal_diubah": "2025-05-12T22:37:29.476201"
+        }
+    },
+    {
+        "model": "fo_app.transaksikeuangan",
+        "pk": 10,
+        "fields": {
+            "id_keluarga": 5,
+            "pengguna": 15,
+            "nama": "Transaksi 2 Keluarga 5",
+            "nominal": 127083,
+            "tanggal_transaksi": "2025-05-12T22:37:29.476206",
+            "jenis": "pengeluaran",
+            "tanggal_dibuat": "2025-05-24T22:37:29.476209",
+            "tanggal_diubah": "2025-04-28T22:37:29.476212"
+        }
+    }
+]

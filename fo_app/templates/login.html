@@ -1,0 +1,150 @@
+<!-- CATATAN UNTUK FRONT-END DEV: JIKA INGIN MENGUBAH STRUKTUR HTML, PASTIKAN TAG <input> DAN <label> TETAP MEMILIKI PROPERTI YANG SAMA SEPERTI SAAT SEBELUM DIUBAH. CONTOHNYA for="nama" GAK BOLEH DIUBAH. KECUALI class="" dan id="", INI BOLEH DITAMBAHKAN. KONFIRMASI KE BACK-END DEV JIKA RAGU -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+    <title>Family Organizer | Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Baloo Chettan 2', cursive;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        input{
+          color: black;
+        }
+        .daftar{
+            width: 100px; height: 40px; border-radius: 15px; border: solid; border-color: rgb(114, 192, 109); font-weight: bold;transition: all 0.3s;color: black;
+
+        }
+        .daftar:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .custom-alert {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(225, 0, 0);
+      color: white;
+      width: auto;
+      height: 85px;
+      max-width: 80%;
+      padding: 10px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      animation: slideIn 0.5s forwards;
+    }
+    
+    .close-btn {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    @keyframes slideIn {
+      from { top: -100px; }
+      to { top: 0; }
+    }
+
+    </style>
+</head>
+<body>
+
+    <div style="width: 100%; height: 100%; background-color: rgb(255, 255, 255); display: flex; justify-content: center;">
+      {% if messages %} {% for message in messages %}
+      <div class="custom-alert">
+      {{ message }}
+      <button class="close-btn">&times;</button>
+      </div>
+      {% endfor %} {% endif %}
+        <div style="width: 450px; height: 450px; background-color: rgb(114, 192, 109); margin-top: 150px; display: flex; flex-direction: column; border-radius: 15px;">
+          
+            <div style="width: 400px; height: 100% ;margin: 25px;">
+                
+                <div style="width: 100%; height: 50px;"><h2>Family Organizer</h2></div>
+                <form id="dataForm" action="{% url 'post_login' %}" method="POST" style="display: flex; flex-direction: column; width: 100%; height: 225px;">
+                  {% csrf_token %}
+                    
+                    <div style="width: 100%; height: 20px;"><label for="email" style="text-align: left; margin-top: 5px;">Email</label></div>
+                    <input type="email" id="email" name="email" style="width: 100%; height: 40px; margin-top: 10px;border-radius: 15px;border: solid;  border-color: rgb(114, 192, 109); text-align: left; padding-left: 25px;" placeholder="Masukkan Email" required>
+                    <div style="width: 100%; height: 20px;"><label for="password" style="text-align: left; margin-top: 5px;">Password</label></div>
+                    <input  type="password" id="password" name="password" style="width: 100%; height: 40px; margin-top: 10px;border-radius: 15px;border: solid;  border-color: rgb(114, 192, 109); text-align: left; padding-left: 25px; color: black;" placeholder="Masukkan Password" required>
+                    <div style="width: 100%; height: 30px; display: flex; flex-direction: column; margin-top: 50px;">
+                        <div style="width: 100%; height: 50px;">
+                            <button class="daftar" type="submit">Login</button>
+                        </div>
+                        
+                    </div>
+                </form>
+                <div style="width: 100%; height: 35px; display: flex; flex-direction: column; font-weight: bold; margin-top: 50px;"><p style="font-size: 18px; font-weight: 500;">Apakah Anda Wali tapi Belum Daftar?</p><button onclick="pindahsignup()" style="width: 100%px;height: 35px;border: none; background-color: rgb(114, 192, 109); font-weight: bold; font-size: 20px;">Buat Akun</button></div>
+                
+            </div>
+           
+        </div>
+    </div>
+    
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+      // Auto close setelah 5 detik
+      document.querySelectorAll('.custom-alert').forEach(alert => {
+        setTimeout(() => {
+          alert.style.animation = 'slideOut 0.5s forwards';
+          setTimeout(() => alert.remove(), 500);
+        }, 5000);
+        
+        // Close manual
+        alert.querySelector('.close-btn').addEventListener('click', () => {
+          alert.style.animation = 'slideOut 0.5s forwards';
+          setTimeout(() => alert.remove(), 500);
+        });
+      });
+    });
+  
+  function pindahsignup() {
+    window.location.href = "{% url 'signup' %}";
+  }
+function confirmSubmit(event) {
+  event.preventDefault(); // Hentikan submit dulu
+
+  Swal.fire({
+    title: 'Berhasil!',
+    text: 'User berhasil ditambahkan.',
+    icon: 'success',
+    confirmButtonText: 'Mantap',
+    customClass: {
+      confirmButton: 'my-confirm-button'
+    }
+
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Submit manual setelah konfirmasi
+      document.getElementById('dataForm').submit();
+    }
+  });
+
+  return false; // Tetap false agar form tidak submit otomatis
+}
+</script>
+</html>
